@@ -1,1 +1,1 @@
-Typescript Fundamentals
+Typescript
