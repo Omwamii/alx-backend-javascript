@@ -27,18 +27,18 @@ const countStudents = (path) => {
       count--; // empty line or improper db
     }
     if (studentsPerField.hasOwnProperty(data[3])) {
-      studentsPerField[data[3]].push(data[0]);
+      studentsPerField[data[3]].push(` ${data[0]}`);
     } else {
       studentsPerField[data[3]] = [];
-      studentsPerField[data[3]].push(data[0]);
+      studentsPerField[data[3]].push(` ${data[0]}`);
     }
   });
 
   rl.on('close', () => {
-    console.log(`Number of students ${count}`);
+    console.log(`Number of students: ${count}`);
     for (const [key, value] of Object.entries(studentsPerField)) {
       field_l = value.length;
-      console.log(`Number of students in ${key}: ${field_l}. ${value}`);
+      console.log(`Number of students in ${key}: ${field_l}. List:${value}`);
     }
   });
 };
