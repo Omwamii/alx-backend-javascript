@@ -1,7 +1,7 @@
-import calculateNumber from './2-calcul_chai.js';
-import { expect } from 'chai';
-
-const fn = calculateNumber;
+// import calculateNumber from './2-calcul_chai.js';
+// import { expect } from 'chai';
+const { expect } = require('chai');
+const fn = require('./2-calcul_chai')
 
 describe('Tests for calculateNumber', () => {
   it('Rounds and add both numbers', () => {
@@ -18,7 +18,7 @@ describe('Tests for calculateNumber', () => {
     const result = fn('DIVIDE', 1.4, 4.5);
     expect(result).to.equal(0.2);
   });
-  
+
   it('Test for divide by zero error', () => {
     const result = fn('DIVIDE', 1.4, 0);
     expect(result).to.equal('Error');
