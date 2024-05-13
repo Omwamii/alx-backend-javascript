@@ -1,5 +1,3 @@
-// import calculateNumber from './2-calcul_chai.js';
-// import { expect } from 'chai';
 const { expect } = require('chai');
 const fn = require('./2-calcul_chai')
 
