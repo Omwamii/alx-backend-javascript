@@ -18,7 +18,7 @@ describe('Tests for calculateNumber', () => {
     const result = fn('DIVIDE', 1.4, 4.5);
     expect(result).to.equal(0.2);
   });
-
+  
   it('Test for divide by zero error', () => {
     const result = fn('DIVIDE', 1.4, 0);
     expect(result).to.equal('Error');
